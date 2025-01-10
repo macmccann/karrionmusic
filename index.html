@@ -10,8 +10,10 @@
     <link href="./music.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -21,7 +23,12 @@
 
   <body>
     <div class="music-container">
-      <h3 id="logo">KARRION</h3>
+      <img
+        id="logo"
+        width="1000px"
+        height="200px"
+        src="./images/karrion_logo_dark_transparent.svg"
+      />
       <div id="socials">
         <a href="https://www.instagram.com/karrionmusic/" target="_blank">
           <img src="./images/instagram.svg" alt="Instagram" />
@@ -35,8 +42,15 @@
         <a href="https://www.youtube.com/@karrionmusic" target="_blank">
           <img src="./images/youtube.svg" alt="Youtube" />
         </a>
+        <a
+          href="https://open.spotify.com/artist/33YcDlpSlHEI5sfQMEyzTt?si=96c56a5af97243c3"
+          target="_blank"
+        >
+          <img src="./images/spotify.svg" alt="Youtube" />
+        </a>
       </div>
-      <div id="songlist">
+      <div id="bio">Karrion is a Brooklyn-based electronic musician.</div>
+      <!-- <div id="songlist">
         <div class="song">
           <h3 class="song-title">sweet disposition (karrion remix)</h3>
           <audio controls>
@@ -138,7 +152,7 @@
             audio.addEventListener("play", pauseOtherAudios);
           }
         </script>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>

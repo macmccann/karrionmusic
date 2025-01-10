@@ -1,78 +1,91 @@
 @font-face {
-    font-family: 'Muller Next Expanded';
-    src: url('MullerNextExpandedTrial-Regular.woff2') format('woff2');
+  font-family: "Muller Next Wide";
+  src: url("MullerNextWideTrial-Regular.woff2") format("woff2");
 }
 
 .music-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000000;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .album-art {
-    width: 80%;
-    max-width: 20rem;
-    margin-top: 2rem;
+  width: 80%;
+  max-width: 20rem;
+  margin-top: 2rem;
 }
 
 #logo {
-    font-family: 'Muller Next Expanded';
-    color: #ffffff;
-    letter-spacing: 0.5rem;
-    padding-top: 2rem;
-    font-size: 2rem;
-    -webkit-user-select: none;
-    /* Safari */
-    -ms-user-select: none;
-    /* IE 10 and IE 11 */
-    user-select: none;
-    /* Standard syntax */
+  font-family: "Muller Next Expanded";
+  color: #ffffff;
+  letter-spacing: 0.5rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
 }
 
 #songlist {
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+#bio {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Muller Next Wide", serif;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  padding: 1rem;
+  line-height: 2rem;
+  max-width: 1000px;
 }
 
 .song-title {
-    color: #ffffff;
-    font-size: 4vw;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-family: "Arvo", serif;
-    font-weight: 200;
-    letter-spacing: 0.1rem;
+  color: #ffffff;
+  font-size: 4vw;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: "Arvo", serif;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
 }
 
 @media (min-width: 35rem) {
-    .song-title {
-        font-size: 1.5rem;
-    }
+  .song-title {
+    font-size: 1.5rem;
+  }
 }
 
 .song {
-    align-items: start;
-    justify-content: start;
-    flex-direction: column;
-    display: flex;
-    margin-bottom: 2rem;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 2rem;
 }
 
 audio {
-    width: 100%;
-    height: 3rem;
+  width: 100%;
+  height: 3rem;
 }
 
 .arvo-regular {
-    font-family: "Arvo", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 audio::-webkit-media-controls-panel {
-    background-color: #e9e9e9;
+  background-color: #e9e9e9;
 }
