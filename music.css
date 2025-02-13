@@ -89,3 +89,30 @@ audio {
 audio::-webkit-media-controls-panel {
   background-color: #e9e9e9;
 }
+
+.sprite {
+  /* height: 24px;
+  width: 24px; */
+  /* border-radius: 5px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: spinfade 2s forwards;
+  opacity: 1; 
+  z-index: 5;
+}
+
+@keyframes spinfade {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+  }
+}
+
+a {
+  position: relative;
+  z-index: 10;
+}
