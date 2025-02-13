@@ -12,6 +12,7 @@ const colors = [
   "rgb(255, 7, 164)",
   "rgb(218, 94, 0)",
 ];
+let shouldSpawn = true;
 
 function throttle(func, delay) {
   let lastCall = 0;
@@ -57,7 +58,9 @@ window.addEventListener("mousemove", function (e) {
       spawningCoordsY + 20 > window.innerHeight
     ) {
     } else {
-      maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+      if (shouldSpawn) {
+        maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+      }
     }
   }
 });
@@ -89,3 +92,13 @@ function spawnStar(spawningCoordsX, spawningCoordsY) {
 }
 
 const maybeSpawnStar = throttle(spawnStar, 70);
+
+// mouse trail controls
+const checkbox = document.getElementById("cb4-9");
+checkbox.addEventListener("change", function () {
+  if (checkbox.checked) {
+    shouldSpawn = true;
+  } else {
+    shouldSpawn = false;
+  }
+});

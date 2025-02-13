@@ -116,3 +116,11 @@ a {
   position: relative;
   z-index: 10;
 }
+
+
+#controls {
+  position: relative;
+  bottom: 100px;
+  flex-direction: row;
+  flex: 1;
+}
