@@ -11,7 +11,6 @@ const colors = [
   "rgb(241, 250, 111)",
   "rgb(255, 7, 164)",
   "rgb(218, 94, 0)",
-  "rgb(0, 0, 0)",
 ];
 
 function throttle(func, delay) {
@@ -48,7 +47,12 @@ window.addEventListener("mousemove", function (e) {
   spawningCoordsX = coords.x - deltaX * 10;
   spawningCoordsY = coords.y - deltaY * 10;
 
-  maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+  if (
+    Math.abs(spawningCoordsX - coords.x) > 10 ||
+    Math.abs(spawningCoordsY - coords.y) > 10
+  ) {
+    maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+  }
 });
 
 const pathText1 =
@@ -77,4 +81,4 @@ function spawnStar(spawningCoordsX, spawningCoordsY) {
   document.body.appendChild(sprite);
 }
 
-const maybeSpawnStar = throttle(spawnStar, 80);
+const maybeSpawnStar = throttle(spawnStar, 70);
