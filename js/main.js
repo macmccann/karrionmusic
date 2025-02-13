@@ -43,7 +43,6 @@ window.addEventListener("mousemove", function (e) {
   deltaX = coords.x - oldX;
   deltaY = coords.y - oldY;
 
-  //   slope = deltaY / deltaX;
   spawningCoordsX = coords.x - deltaX * 10;
   spawningCoordsY = coords.y - deltaY * 10;
 
@@ -51,7 +50,15 @@ window.addEventListener("mousemove", function (e) {
     Math.abs(spawningCoordsX - coords.x) > 10 ||
     Math.abs(spawningCoordsY - coords.y) > 10
   ) {
-    maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+    if (
+      spawningCoordsX < 0 ||
+      spawningCoordsY < 0 ||
+      spawningCoordsX + 20 > window.innerWidth ||
+      spawningCoordsY + 20 > window.innerHeight
+    ) {
+    } else {
+      maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+    }
   }
 });
 
