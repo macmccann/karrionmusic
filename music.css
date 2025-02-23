@@ -23,7 +23,8 @@
   font-family: "Muller Next Expanded";
   color: #ffffff;
   letter-spacing: 0.5rem;
-  padding-top: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
   font-size: 2rem;
   -webkit-user-select: none;
   /* Safari */
@@ -31,6 +32,7 @@
   /* IE 10 and IE 11 */
   user-select: none;
   /* Standard syntax */
+  height: 80px;
 }
 
 #songlist {
@@ -41,8 +43,6 @@
 .bio {
   color: #ffffff;
   font-size: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   font-family: "Muller Next Wide", serif;
   font-weight: 200;
   letter-spacing: 0.1rem;
