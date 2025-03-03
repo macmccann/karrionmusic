@@ -135,3 +135,9 @@ a {
   flex-direction: row;
   flex: 1;
 }
+
+#main-canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

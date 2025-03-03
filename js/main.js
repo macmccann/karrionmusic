@@ -59,7 +59,12 @@ window.addEventListener("mousemove", function (e) {
     ) {
     } else {
       if (shouldSpawn) {
-        maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+        const MODE = "acid";
+        if (MODE == "stars") {
+          maybeSpawnStar(spawningCoordsX, spawningCoordsY);
+        } else {
+          maybeSpawnAcidCircle(spawningCoordsX, spawningCoordsY);
+        }
       }
     }
   }
@@ -91,7 +96,31 @@ function spawnStar(spawningCoordsX, spawningCoordsY) {
   document.body.appendChild(sprite);
 }
 
+function spawnAcidCircle(spawningCoordsX, spawningCoordsY) {
+  const svgNS = "http://www.w3.org/2000/svg";
+  const sprite = document.createElementNS(svgNS, "svg");
+  sprite.style.width = "24";
+  sprite.style.height = "24";
+  sprite.setAttribute("viewBox", "0 0 1235 1175");
+  sprite.id = "svg2";
+  sprite.xmlns = "http://www.w3.org/2000/svg";
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  sprite.innerHTML = pathText1 + randomColor + pathText2;
+
+  sprite.classList.add("sprite");
+  sprite.style.left = spawningCoordsX - 12 + "px";
+  sprite.style.top = spawningCoordsY - 12 + "px";
+  sprite.classList.add("active");
+  setTimeout(() => {
+    sprite.style.height = "0px";
+    sprite.style.width = "0px";
+    document.body.removeChild(sprite);
+  }, 2000);
+  document.body.appendChild(sprite);
+}
+
 const maybeSpawnStar = throttle(spawnStar, 70);
+const maybeSpawnAcidCircle = throttle(spawnAcidCircle, 70);
 
 // mouse trail controls
 const checkbox = document.getElementById("cb4-9");
