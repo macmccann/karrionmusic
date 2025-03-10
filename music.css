@@ -3,14 +3,36 @@
   src: url("MullerNextWideTrial-Regular.woff2") format("woff2");
 }
 
+body {
+  background-color: #000000;
+}
+
 .music-container {
   width: 100%;
   height: 100%;
   display: flex;
+  padding-right: 1rem;
+  padding-left: 1rem;
   flex-direction: column;
   align-items: center;
-  background-color: #000000;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#frosted-glass-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .album-art {
@@ -23,7 +45,6 @@
   font-family: "Muller Next Expanded";
   color: #ffffff;
   letter-spacing: 0.5rem;
-  padding-top: 5rem;
   padding-bottom: 1rem;
   font-size: 2rem;
   -webkit-user-select: none;
@@ -35,9 +56,8 @@
   height: 80px;
 }
 
-#songlist {
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
+.content {
+  z-index: 10;
 }
 
 .bio {
@@ -140,4 +160,7 @@ a {
   height: 100%;
   width: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
