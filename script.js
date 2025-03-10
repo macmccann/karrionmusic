@@ -1265,7 +1265,7 @@ function updateKeywords() {
 
 updateKeywords();
 initFramebuffers();
-multipleSplats(parseInt(Math.random() * 20) + 5);
+multipleSplats(5);
 
 let lastUpdateTime = Date.now();
 let colorUpdateTimer = 0.0;
