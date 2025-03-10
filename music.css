@@ -28,6 +28,7 @@ u {
   display: flex;
   flex-direction: column;
   align-items: center;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 2px solid rgba(255, 255, 255, 0.05);
