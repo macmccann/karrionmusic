@@ -1815,11 +1815,11 @@ function hashCode(s) {
 }
 
 // mouse trail controls
-const checkbox = document.getElementById("cb4-9");
-checkbox.addEventListener("change", function () {
-  if (checkbox.checked) {
-    config.SHOULD_SPAWN = true;
-  } else {
-    config.SHOULD_SPAWN = false;
-  }
-});
+// const checkbox = document.getElementById("cb4-9");
+// checkbox.addEventListener("change", function () {
+//   if (checkbox.checked) {
+//     config.SHOULD_SPAWN = true;
+//   } else {
+//     config.SHOULD_SPAWN = false;
+//   }
+// });
