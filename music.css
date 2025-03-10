@@ -41,6 +41,12 @@ u {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  margin-right: 2.5rem;
+  margin-left: 2.5rem;
+}
+
+#socials {
+  text-align: center;
 }
 
 .album-art {
