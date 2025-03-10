@@ -1654,6 +1654,7 @@ canvas.addEventListener(
   "touchmove",
   (e) => {
     e.preventDefault();
+    if (!config.SHOULD_SPAWN) return;
     const touches = e.targetTouches;
     for (let i = 0; i < touches.length; i++) {
       let pointer = pointers[i + 1];

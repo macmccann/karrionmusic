@@ -4,6 +4,10 @@
 }
 
 body {
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
 }
 
@@ -11,10 +15,13 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  padding-right: 1rem;
-  padding-left: 1rem;
   flex-direction: column;
   align-items: center;
+}
+
+a,
+u {
+  text-decoration: none;
 }
 
 #frosted-glass-container {
@@ -69,6 +76,7 @@ body {
   padding: 1rem;
   line-height: 2rem;
   max-width: 1000px;
+  text-align: center;
 }
 
 .bookings {
@@ -81,6 +89,7 @@ body {
   margin: 0;
   line-height: 2rem;
   max-width: 1000px;
+  text-align: center;
 }
 
 .song-title {
