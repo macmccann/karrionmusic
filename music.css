@@ -46,6 +46,7 @@ u {
 }
 
 #socials {
+  padding-top: 1rem;
   text-align: center;
 }
 
@@ -80,7 +81,7 @@ u {
   font-family: "Muller Next Wide", serif;
   font-weight: 200;
   letter-spacing: 0.1rem;
-  padding: 1rem;
+  padding-top: 1rem;
   line-height: 2rem;
   max-width: 1000px;
   text-align: center;
@@ -179,4 +180,11 @@ a {
   top: 0;
   left: 0;
   z-index: 10;
+}
+
+#portrait {
+  width: 35rem;
+  height: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
