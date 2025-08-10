@@ -36,7 +36,6 @@
         user-select: none;
       }
 
-
       canvas {
         width: 100%;
         height: 100%;
@@ -77,8 +76,6 @@
         float: right;
       }
 
-
-
       .link {
         width: 100%;
         display: inline-block;
@@ -114,9 +111,8 @@
     <canvas style="position: absolute"></canvas>
     <div class="music-container">
       <div id="frosted-glass-container">
-        
         <div>
-          <img id="portrait" src="./images/karrion_portrait.png"></img>
+          <img id="portrait" src="./images/karrion_portrait.png" />
         </div>
         <div class="bio content">
           Karrion is a Brooklyn-based electronic musician.
@@ -143,7 +139,7 @@
           </a>
         </div>
       </div>
-      
+
       <!-- <div class="checkbox-label content">
         <p class="checkbox-text">mouse trails</p>
         <div class="checkbox-wrapper-9">
@@ -157,6 +153,12 @@
         </div>
       </div> -->
     </div>
-    <script src="./script.js"></script>
+    <script>
+      setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "script.js";
+        document.body.appendChild(script);
+      }, 1000);
+    </script>
   </body>
 </html>
