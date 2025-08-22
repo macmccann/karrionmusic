@@ -87,7 +87,14 @@ let pointers = [];
 let splatStack = [];
 pointers.push(new pointerPrototype());
 
-const { gl, ext } = getWebGLContext(canvas);
+let gl, ext;
+try {
+  const webglContext = getWebGLContext(canvas);
+  gl = webglContext.gl;
+  ext = webglContext.ext;
+} catch (error) {
+  console.error('Failed to initialize WebGL context:', error);
+}
 
 if (isMobile()) {
   config.DYE_RESOLUTION = 512;
@@ -1474,7 +1481,7 @@ function drawDisplay(target) {
   if (config.SHADING)
     gl.uniform2f(displayMaterial.uniforms.texelSize, 1.0 / width, 1.0 / height);
   gl.uniform1i(displayMaterial.uniforms.uTexture, dye.read.attach(0));
-  if (config.BLOOM) {
+  if (config.BLOOM && ditheringTexture && ditheringTexture.texture) {
     gl.uniform1i(displayMaterial.uniforms.uBloom, bloom.attach(1));
     gl.uniform1i(
       displayMaterial.uniforms.uDithering,

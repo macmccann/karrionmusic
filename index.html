@@ -95,6 +95,21 @@
           opacity: 1;
         }
       }
+
+      @keyframes background-fade {
+        0% {
+          background-color: #8c8c8c;
+        }
+        100% {
+          background-color: black;
+        }
+      }
+
+      body {
+        animation: background-fade 1.5s ease-in-out forwards;
+        margin: 0;
+        padding: 0;
+      }
     </style>
     <script>
       window.ga =
@@ -154,11 +169,11 @@
       </div> -->
     </div>
     <script>
-      setTimeout(() => {
+      window.addEventListener('load', () => {
         const script = document.createElement("script");
         script.src = "script.js";
         document.body.appendChild(script);
-      }, 1000);
+      });
     </script>
   </body>
 </html>
