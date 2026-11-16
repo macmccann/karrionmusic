@@ -1,13 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="apple-touch-icon" href="favicon-32x32.png" />
     <link rel="icon" href="favicon-32x32.png" />
@@ -123,16 +120,19 @@
     </script>
   </head>
   <body>
-    <canvas style="position: absolute"></canvas>
+    <canvas id="fluid-background" aria-hidden="true"></canvas>
     <div class="music-container">
       <div id="frosted-glass-container">
         <div>
-          <img id="portrait" src="./images/karrion_portrait.png" />
+          <img
+            id="portrait"
+            src="./images/karrion_portrait.png"
+            alt="Karrion"
+          />
         </div>
         <div class="bio content">
           Karrion is a Brooklyn-based electronic musician.
         </div>
-        <p class="bookings content">bookings: chris@pureformartists.com</p>
         <div id="socials">
           <a href="https://www.instagram.com/karrionnnnn/" target="_blank">
             <img src="./images/instagram.svg" alt="Instagram" />
@@ -168,12 +168,6 @@
         </div>
       </div> -->
     </div>
-    <script>
-      window.addEventListener('load', () => {
-        const script = document.createElement("script");
-        script.src = "script.js";
-        document.body.appendChild(script);
-      });
-    </script>
+    <script type="module" src="./background.js"></script>
   </body>
 </html>

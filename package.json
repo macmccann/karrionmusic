@@ -1,0 +1,11 @@
+{
+  "name": "karrionmusic",
+  "private": true,
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "pngjs": "7.0.0"
+  }
+}
