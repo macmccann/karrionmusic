@@ -67,7 +67,7 @@ export function createFluidSimulation(canvas, { signal, onReady, onError }) {
     this.deltaY = 0;
     this.down = false;
     this.moved = false;
-    this.color = [30, 0, 300];
+    this.color = generateColor();
   }
 
   let pointers = [];

@@ -25,6 +25,26 @@ test.beforeEach(async ({ page }) => {
   );
 });
 
+test("fluid stays colored when the mouse moves immediately after startup", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.firstHoverRendered = new Promise(resolve => {
+      const observer = new MutationObserver(() => {
+        const canvas = document.querySelector("#fluid-background.is-ready");
+        if (!canvas) return;
+        observer.disconnect();
+        // Hover without clicking before the simulation's first timed color update.
+        canvas.dispatchEvent(new MouseEvent("mousemove", { clientX: 50, clientY: 80 }));
+        requestAnimationFrame(() => requestAnimationFrame(resolve));
+      });
+      observer.observe(document, { subtree: true, attributes: true, attributeFilter: ["class"] });
+    });
+  });
+  await page.goto("/");
+  await page.evaluate(() => window.firstHoverRendered);
+  await page.addStyleTag({ content: ".music-container { visibility: hidden; }" });
+  expect(coloredPixels(await page.locator("canvas").screenshot())).toBeGreaterThan(100);
+});
+
 test("fluid renders again after repeated WebGL context loss", async ({
   page,
 }) => {
